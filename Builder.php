@@ -92,7 +92,7 @@ class QueryBuilder implements Builder
     {
         if ($offset == 0) {
             $this->query->limit = "LIMIT $start";
-        } else {
+        } elseif($offset > 0 && $start > 0) {
             $this->query->limit = "LIMIT $start OFFSET $offset";
         }
         return $this;
@@ -112,11 +112,11 @@ class User extends QueryBuilder
 
 $category = new MyCategory();
 $model = new User();
-$a = $model->select()->where('id', 3)
-    ->where('first_name', 'like', '%m%')
-    ->where('last_name', 'like', '%bek')->limit(25, 25)->get();
-
-var_dump($a);
+//$a = $model->select()->where('id', 3)
+//    ->where('first_name', 'like', '%m%')
+//    ->where('last_name', 'like', '%bek')->limit(25, 25)->get();
+//
+//var_dump($a);
 
 
 
