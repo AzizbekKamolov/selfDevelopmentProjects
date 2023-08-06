@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="bc2e1e1c-d6d1-45ef-98d3-bef5bfc83649" name="qabul_texnikum_tsul" url="http://qabul2023-texnikum.tsul.uz">
+        <fileTransfer host="qabul2023-texnikum.tsul.uz" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

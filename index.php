@@ -1,20 +1,19 @@
 <?php
 
-include('Builder.php');
+use SelfDevelopmentProjects\Box;
+use SelfDevelopmentProjects\User;
 
-class Student extends QueryBuilder
-{
-    protected $table = 'students';
-}
+require_once('vendor/autoload.php');
+require 'functions.php';
 
-$student = new Student();
 
-$data = $student->select([
-    'id',
-    'first_name',
-    'last_name',
-    'middle_name',
-    'created_at',
-    'deleted_at'
-])->where('id', '>=', 3)->limit(10,5)->get();
-echo($data);
+echo addNumbers(45, 486);
+echo "\n";
+
+$box = new Box(['liner', 'life', 'Bottle']);
+$box->takeOne();
+print_r($box->startsWith('l'));
+
+echo "\n";
+$user = new User(45, 'Salim');
+echo $user->tellName();
